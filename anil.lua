@@ -190,23 +190,18 @@ local function CreateLockedScriptBtn(name, url)
 
         passBox:CaptureFocus()
 
-        passBox.InputBegan:Connect(function(input)
-            if input.KeyCode == Enum.KeyCode.Return then
-                if passBox.Text == SCRIPT_PASSWORD then
-                    -- ✅ CORRECT PASSWORD
-                    btn.Text = "HUB"
-                    btn.BackgroundColor3 = Color3.fromRGB(40, 190, 80)
-                    passBox:Destroy()
+      passBox:GetPropertyChangedSignal("Text"):Connect(function()
+    if passBox.Text == SCRIPT_PASSWORD then
+        btn.Text = "HUB"
+        btn.BackgroundColor3 = Color3.fromRGB(40, 190, 80)
+        passBox:Destroy()
+        loadstring(game:HttpGet(url))()
+    end
+end)
+    end) -- closes MouseButton1Click
+end -- closes CreateLockedScriptBtn
 
-                    loadstring(game:HttpGet(url))()
-                else
-                    -- ❌ WRONG PASSWORD
-                    passBox:Destroy()
-                end
-            end
-        end)
-    end)
-end
+
 
 -- 🔓 PUBLIC (EVERYONE)
 CreateScriptBtn("INF YIELD", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
