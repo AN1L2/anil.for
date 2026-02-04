@@ -204,7 +204,7 @@ end -- closes CreateLockedScriptBtn
 
 
 -- 🔓 PUBLIC (EVERYONE)
-CreateScriptBtn("INF YIELD", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+CreateScriptBtn("ANIL YIELD", "https://github.com/AN1L2/ANILYIELD/blob/main/YIELD.LUA")
 CreateScriptBtn("REDZ HUB", "https://raw.githubusercontent.com/REDZHUB/REDZHUB/main/REDZHUB")
 CreateScriptBtn("ANIL EMOTE", "https://raw.githubusercontent.com/AN1L2/ANILGAZE/refs/heads/main/anil.emote")
 CreateScriptBtn("MIKEY CHAT", "https://raw.githubusercontent.com/Gaurav-0196/Mickey-Chat/refs/heads/main/MickeyChat")
